@@ -52,10 +52,11 @@ ORDER BY movies.release_date ASC
 
 
 
-### Ajouter un film:
+### Ajouter un film: Iron Man 5 par Michael Bay
 
 ```
-
+INSERT INTO movies(title,director,running_time,release_date)
+VALUES ('Iron Man 5','Michael Bay','123','2023')
 ```
 
 
@@ -64,25 +65,29 @@ ORDER BY movies.release_date ASC
 ### Ajouter un acteur:
 
 ```
-
+INSERT INTO actors(last_name,first_name,birthday)
+VALUES ('Bettany', 'Paul','1971-05-27')
 ```
 
 
 
 
-### Modifier un film:
+### Modifier un film: IronMan 5 -> IronMan 6 trompé de numéro
 
 ```
-
+UPDATE `movies`
+SET `title` = "Iron Man 5"
+WHERE `movies`.`title` = "Iron Man 6"
 ```
 
 
 
 
-### Supprimer un acteur:
+### Supprimer un acteur: Tuer Paul Bettany
 
 ```
-
+DELETE FROM `actors`
+WHERE `actors`.`last_name` = "Bettany" AND `actors`.`first_name` = "Paul"
 ```
 
 
@@ -91,5 +96,7 @@ ORDER BY movies.release_date ASC
 ### Afficher les 3 derniers acteurs ajoutés:
 
 ```
-
+SELECT first_name AS Prénom, last_name AS NOM
+FROM actors
+ORDER BY id DESC LIMIT 3
 ```
