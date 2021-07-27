@@ -24,7 +24,7 @@ ORDER BY last_name ASC
 
 
 
-### La liste des acteurs pour un film donné (ici Avengers: Endgame):
+### La liste des acteurs principaux pour un film donné (ici Avengers: Endgame):
 
 ```
 SELECT actors.first_name,actors.last_name 
