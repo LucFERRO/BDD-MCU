@@ -48,3 +48,48 @@ LEFT JOIN actors ON actors_movies.id_actors = actors.id
 WHERE actors.last_name = 'Downey' 
 ORDER BY movies.release_date ASC
 ```
+
+
+
+
+### Ajouter un film:
+
+```
+
+```
+
+
+
+
+### Ajouter un acteur:
+
+```
+
+```
+
+
+
+
+### Modifier un film:
+
+```
+
+```
+
+
+
+
+### Supprimer un acteur:
+
+```
+
+```
+
+
+
+
+### Afficher les 3 derniers acteurs ajoutés:
+
+```
+
+```
