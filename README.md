@@ -76,8 +76,8 @@ VALUES ('Bettany', 'Paul','1971-05-27')
 
 ```sql
 UPDATE `movies`
-SET `title` = "Iron Man 5"
-WHERE `movies`.`title` = "Iron Man 6"
+SET `title` = "Iron Man 6"
+WHERE `movies`.`title` = "Iron Man 5"
 ```
 
 
