@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 27 juil. 2021 à 07:23
+-- Généré le : mer. 28 juil. 2021 à 12:49
 -- Version du serveur :  5.7.31
 -- Version de PHP : 7.4.9
 
@@ -30,13 +30,13 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `actors`;
 CREATE TABLE IF NOT EXISTS `actors` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `last_name` varchar(20) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
+  `last_name` varchar(50) NOT NULL,
+  `first_name` varchar(50) NOT NULL,
   `birthday` date NOT NULL,
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=69 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=70 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `actors`
@@ -110,7 +110,8 @@ INSERT INTO `actors` (`id`, `last_name`, `first_name`, `birthday`, `created`, `m
 (65, 'Pugh', 'Florence', '1996-01-03', '2021-07-26 22:42:30', '2021-07-26 22:42:30'),
 (66, 'Harbour', 'David', '1975-04-10', '2021-07-26 22:42:57', '2021-07-26 22:42:57'),
 (67, 'Weisz', 'Rachel', '1970-03-07', '2021-07-26 22:43:29', '2021-07-26 22:43:29'),
-(68, 'Ray', 'Winstone', '1957-02-19', '2021-07-26 22:44:07', '2021-07-26 22:44:07');
+(68, 'Ray', 'Winstone', '1957-02-19', '2021-07-26 22:44:07', '2021-07-26 22:44:07'),
+(69, 'Ferro', 'Luc', '1997-05-15', '2021-07-28 09:21:14', '2021-07-28 09:21:14');
 
 -- --------------------------------------------------------
 
@@ -276,7 +277,7 @@ CREATE TABLE IF NOT EXISTS `movies` (
   `created` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   `modified` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `movies`
@@ -306,7 +307,8 @@ INSERT INTO `movies` (`id`, `title`, `director`, `running_time`, `release_date`,
 (21, 'Thor', 'Kenneth Branagh', 114, 2011, '2021-07-26 21:56:27', '2021-07-26 21:56:27'),
 (22, 'Captain America: First Avenger', 'Joe Johnston', 124, 2011, '2021-07-26 21:56:27', '2021-07-26 21:56:27'),
 (23, 'Avengers', 'Joss Whedon', 143, 2012, '2021-07-26 21:56:27', '2021-07-26 21:56:27'),
-(30, 'Black Widow', 'Cate Shortland', 133, 2021, '2021-07-26 22:39:59', '2021-07-26 22:39:59');
+(30, 'Black Widow', 'Cate Shortland', 133, 2021, '2021-07-26 22:39:59', '2021-07-26 22:39:59'),
+(31, 'Iron Man 4', 'Michael Bay', 234, 2021, '2021-07-27 13:17:25', '2021-07-27 13:17:25');
 
 --
 -- Contraintes pour les tables déchargées
